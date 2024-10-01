@@ -1,7 +1,9 @@
 # AcademiaPlus
  
 Author: [Razia Munir]
+
 APIs are integrated by Abu Hurar and Ali Hussain 
+
 Table of Contents
 1.	Project Overview
 2.	Features
@@ -11,24 +13,38 @@ Table of Contents
 6.	Database Setup
 7.	Running the Application
 9.	License
+
     
 1. Project Overview
 ________________________________________
 
-This project is built using Laravel 9, a PHP framework for web artisans. It provides an expressive and elegant syntax that makes development enjoyable. This application includes various essential features such as API authentication, role management, and JWT-based token authentication.
+This project is built using Laravel 9, a PHP framework for web artisans. It provides an expressive and elegant syntax that makes development enjoyable.
+This application includes various essential features such as API authentication, role management, and JWT-based token authentication.
 ________________________________________
+
 3. Features
 •	 Role-Based Access Control using Spatie Laravel Permission.
+
 •	JWT Authentication using Tymon JWT Auth.
+
 •	CORS Configuration for handling cross-origin requests.
+
 •	Queue Management with database drivers.
+
 ________________________________________
+
 3. System Requirements
+4. 
 Before installing the project, ensure your system meets the following requirements:
+
 •	PHP version >= 8.0
+
 •	Composer
+
 •	MySQL
+
 •	Web server (Apache)
+
 ________________________________________
 4. Installation
 Step 1: Clone the repository
