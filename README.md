@@ -18,7 +18,6 @@ ________________________________________
 3. Features
 •	 Role-Based Access Control using Spatie Laravel Permission.
 •	JWT Authentication using Tymon JWT Auth.
-•	 API Support with Laravel Sanctum.
 •	CORS Configuration for handling cross-origin requests.
 •	Queue Management with database drivers.
 ________________________________________
@@ -33,7 +32,7 @@ ________________________________________
 Step 1: Clone the repository
 To get started, clone the repository from GitHub
 Copy code
-git clone https://github.com/your-username/your-repository-name.git
+git clone https://github.com/iRaziaMunir/AcademiaPlus.git
 cd your-repository-name
 Step 2: Install PHP Dependencies
 Use Composer to install the PHP dependencies :
