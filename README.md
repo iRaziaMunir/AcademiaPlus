@@ -13,8 +13,9 @@ Table of Contents
 8.	API Documentation
 9.	License
 1. Project Overview
-This project is built using Laravel 9, a PHP framework for web artisans. It provides an expressive and elegant syntax that makes development enjoyable. This application includes various essential features such as API authentication, role management, and JWT-based token authentication.________________________________________
-2. Features
+This project is built using Laravel 9, a PHP framework for web artisans. It provides an expressive and elegant syntax that makes development enjoyable. This application includes various essential features such as API authentication, role management, and JWT-based token authentication.
+________________________________________
+3. Features
 •	 Role-Based Access Control using Spatie Laravel Permission.
 •	JWT Authentication using Tymon JWT Auth.
 •	 API Support with Laravel Sanctum.
@@ -94,7 +95,7 @@ php artisan serve
 Access the application by visiting http://localhost:8000 in your browser.
 ________________________________________
 
-10. API Documentation
+8. API Documentation
 If your project has APIs, include details on how to use them.
 API Endpoints
 Logs in the user
@@ -154,7 +155,7 @@ post/set-student-password/{token}
 post/reset-student-password
 post/store-video
 ________________________________________
-11. License
+9. License
 This project is open-source and available under the MIT License.
 
 
