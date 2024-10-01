@@ -10,7 +10,6 @@ Table of Contents
 5.	Configuration
 6.	Database Setup
 7.	Running the Application
-8.	API Documentation
 9.	License
 1. Project Overview
 This project is built using Laravel 9, a PHP framework for web artisans. It provides an expressive and elegant syntax that makes development enjoyable. This application includes various essential features such as API authentication, role management, and JWT-based token authentication.
@@ -93,68 +92,5 @@ Run the following command to start the local development server:
 php artisan serve
 Access the application by visiting http://localhost:8000 in your browser.
 ________________________________________
-
-8. API Documentation
-If your project has APIs, include details on how to use them.
-API Endpoints
-Logs in the user
-•	POST /api/login 
-Protected routes with jwt auth
-Logs out (admin, supervisor, manager, student)
-•	Get /api/logout 
-Show user profile(admin, supervisor, manager, student)
-•	Get /api/user-profile  - Post/api/admin/add-user - Add user ( supervisor, manager)
-Sets password ( supervisor, manager ) => add token received in notification mail
-•	Post/set-passwod{token} 
-view all students submissions based on statuses
-•	GET/admin/view-students
- view all students submissions with out filtering 
-•	Get/admin/view-submissions
-Admin will accept student submission 
-•	Patch/admin/submission/{submission}/accept  ( here student submission id will be passed)
-Admin will accept student submission 
-•	Patch/admin/submission/{submission}/reject  ( here student submission id will be passed)
- Question Management
-Admin will create question, jwt access token is required
- post/create-questions
-Update an existing question (question id is requird)
-put/update-question/{id}
-Delete a question 
-delete/delete-question/{id}
-Quiz Management 
-post/create-quiz 
-view all quizzes
-get/view-quizzes
- update quiz
-put/update-quiz/{id} 
-Delete quiz
- delete/delete-quiz/{id}
-view all quizzes with questions
-get/view-quiz-with-questions/{quizId}
-Quiz Assignment 
-post/assign-quiz
-view single quiz
-get/view-quiz/{quizId}
-view all assigned quizzes
- get/view-assigned-quizzes
-Attempt assigned quizzes
-post/attempt-quiz
-view quizzes results
- get/view-quiz-attempt/{attemptId})
- Getting Attempts for a Specific Quiz Assignment 
-get/{assignmentId}/attempts 
-get/view-video/{attemptId}
-public routes
- Student Submission Route 
-post/submission
-Set Password Routes
-post/set-password/{token}
-post/set-password/{token}
-post/set-student-password/{token}
-post/reset-student-password
-post/store-video
-________________________________________
-9. License
-This project is open-source and available under the MIT License.
 
 
