@@ -29,31 +29,8 @@ class AuthController extends Controller
         return ApiResponse::success($user, 'User registered successfully', Response::HTTP_OK);
     }
 
-    // public function login(LoginRequest $request)
-    // {
-    //     $input = $request->only('email', 'password');
-
-    //     // Attempt to authenticate the user
-    //     if (!$jwt_token = JWTAuth::attempt($input)) {
-    //         return ApiResponse::error('Invalid Email or Password', 401);
-    //     }
-    //     // Get authenticated user
-    //     $user = Auth::user();
-    //     $role = $user->getRoleNames();
-    //     return ApiResponse::success(
-    //         [
-    //           'name' => $user->name,
-    //           'role' => $user->role->name // Only return the user's name
-    //         ],
-    //         'Login successful',
-    //         200,
-    //         $jwt_token,                        // JWT Token
-    //         'Bearer',                          // Token type
-    //         JWTAuth::factory()->getTTL() * 60  // Token expiry time in seconds
-    //     );
-    // }
     public function login(LoginRequest $request)
-{
+    {
     // dd('I am from login');
     $input = $request->only('email', 'password');
 
@@ -65,27 +42,40 @@ class AuthController extends Controller
     // Get authenticated user
     $user = Auth::user();
 
+    $role = $user->getRoleNames(); // Returns a collection of role names
+
     if ($user->student_id) {
         $studentId = $user->student_id;  // You have the student_id
     } else {
         $studentId = null;  // Not a student, maybe a manager or supervisor
     }
-    // Get the user's roles (Spatie provides this method)
-    $role = $user->getRoleNames(); // Returns a collection of role names
 
-    return ApiResponse::success(
-        [
-            'studentId' => $user->student_id,
+    if($studentId !== null && $role->contains('student'))
+    {
+        $responseData = [
+        
+                'studentId' => $studentId,
+                'name' => $user->name,
+                'role' => $role
+        ];
+    }
+    else
+    {
+        $responseData = [
+        
             'name' => $user->name,
-            'role' => $role // Return the user's roles as an array
-        ],
+            'role' => $role
+    ];
+    }
+    return ApiResponse::success(
+       $responseData,
         'Login successful',
         200,
         $jwt_token,                        // JWT Token
         'Bearer',                          // Token type
         JWTAuth::factory()->getTTL() * 60  // Token expiry time in seconds
     );
-}
+    }
 
     public function logout()
     {
