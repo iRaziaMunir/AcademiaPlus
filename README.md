@@ -104,6 +104,9 @@ Before installing the project, ensure your system meets the following requiremen
         •	MySQL
         
         •	Web server (Apache)
+Note
+
+            make sure you are using mysql server if you are using mariaDB server you may find some errors while running migrations
 
 
 4. Installation
@@ -113,6 +116,7 @@ Step 1:Clone the repository
         To get started, clone the repository from GitHub
     
         git clone https://github.com/iRaziaMunir/AcademiaPlus.git
+        
         cd your-repository-name
     
 Step 2: Install PHP Dependencies
@@ -178,6 +182,8 @@ Queue Management:
 JWT Configuration:
 
         JWT_SECRET: Secret key for JWT token generation and validation.
+        run this command to generate jwt secert key
+        php artisan jwt:secret
 
 Step 4: Generate Application Key
 
